@@ -1,0 +1,255 @@
+/* ───────────── NAVBAR ───────────── */
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2fa7b1;
+}
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+}
+.link {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+}
+.link.active { color: #2563eb; }
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.username { font-weight: 600; color: #1f2937; }
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ───────────── GLOBAL ───────────── */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #333;
+}
+.homepage { display: flex; flex-direction: column; width: 100%; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ───────────── HERO ───────────── */
+.hero-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 0;
+  background: linear-gradient(to right, #f8faff, #abd3ef);
+}
+.hero-text { flex: 1 1 320px; max-width: 500px; }
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2fa7b1;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.hero-text h1 span { color: #8adadf; }
+.hero-text p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  background: #84d4dd;
+  color: #fff;
+  padding: .75rem 1.8rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(8,16,103,.25);
+  transition: all .25s ease;
+}
+.cta-btn:hover { background: #226970; transform: translateY(-2px); }
+
+.hero-img { flex: 1 1 300px; display: flex; justify-content: center; }
+.hero-img img {
+  width: 100%; max-width: 420px; aspect-ratio: 4/3;
+  object-fit: cover; object-position: center;
+  border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+/* ───────────── HERO IMAGE SLIDESHOW ───────────── */
+.homepage-hero-image-wrapper{
+  position:relative;width:100%;max-width:500px;height:300px;overflow:hidden;
+  border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.15);
+  display:flex;justify-content:center;align-items:center;margin:0 auto;
+}
+.homepage-hero-image{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity 1s ease-in-out;
+}
+.homepage-hero-image.active{opacity:1;}
+
+/* ───────────── EVENTS ───────────── */
+.events { background:#fff; padding:3rem 0; text-align:center; }
+.events h2 { font-size:2rem; font-weight:700; margin-bottom:2rem; }
+
+.events-grid{
+  display:flex; justify-content:center; align-items:flex-start; gap:2rem;
+  flex-wrap:wrap; margin:0 auto; max-width:1100px; padding:1.5rem 0;
+}
+
+.event-card{
+  background:#f8fafc; border-radius:16px; overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  transition:transform .2s ease, box-shadow .2s ease;
+  max-width:300px; height:450px; margin:0 auto;
+}
+.event-card:hover{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.12); }
+
+.event-card img{
+  width:100%; height:180px; object-fit:cover; object-position:center;
+  border-top-left-radius:16px; border-top-right-radius:16px;
+}
+.event-card .content{ padding:1.2rem; text-align:left; }
+.event-card h3{ font-size:1.3rem; font-weight:600; margin-bottom:.25rem; }
+.event-card p{ color:#475569; font-size:.95rem; margin-bottom:.5rem; }
+.event-card .date{ color:#64748b; font-size:.9rem; margin-bottom:.75rem; }
+
+/* ✅ RSVP button — exact same size for <button> and <Link class="rsvp-btn"> */
+.events .event-card .content .rsvp-btn,
+.event-card button{
+  display:inline-flex; align-items:center; justify-content:center;
+  text-decoration:none; user-select:none;
+  padding: 8px 16px;              /* <- unified size */
+  line-height: 1;                 /* keep height tight */
+  font-size: 0.95rem;             /* consistent text size */
+  border-radius: 999px;
+  border: 0;
+  background: linear-gradient(135deg,#6be5d3,#5aa8ff);
+  color:#0b1220;
+  font-weight:700;
+  box-shadow:0 10px 24px rgba(90,168,255,.28);
+  cursor:pointer;
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+.events .event-card .content .rsvp-btn:hover,
+.event-card button:hover{
+  transform:translateY(-1px);
+  box-shadow:0 14px 28px rgba(90,168,255,.34);
+  filter:saturate(1.05);
+}
+.events .event-card .content .rsvp-btn:active,
+.event-card button:active{ transform:translateY(0); }
+
+/* ───────────── POSTS ───────────── */
+.posts{ background:linear-gradient(to bottom,#f0f9ff,#fff); padding:3rem 0; }
+.posts h2{ font-size:2rem; font-weight:700; text-align:center; margin-bottom:2rem; }
+.post{
+  background:#fff; border-radius:12px; max-width:700px; margin:1rem auto; padding:1.5rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.07);
+}
+.post .user{ font-weight:600; color:#071415; }
+.post p{ margin-top:.3rem; font-size:1rem; }
+.post button{ background:none; color:#29a6b6; font-weight:600; border:none; margin-top:.5rem; cursor:pointer; }
+
+.upcoming-events {
+  padding: 40px 72px;
+}
+
+.event-card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  padding: 20px 22px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event-card-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.event-card-when {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.event-card-location {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.event-card-description {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+
+/* ───────────── RESPONSIVE ───────────── */
+@media (max-width:1024px){
+  .nav-links{ gap:.75rem; }
+  .hero-text h1{ font-size:2.2rem; }
+}
+@media (max-width:768px){
+  .hamburger{ display:block; }
+  .nav-links{
+    display:none; flex-direction:column; background:#fff; position:absolute;
+    top:60px; right:20px; padding:1rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.15);
+  }
+  .nav-links.show{ display:flex; }
+
+  .hero-main{ flex-direction:column; text-align:center; padding:2rem 1rem; }
+  .hero-text h1{ font-size:2rem; }
+  .hero-text p{ font-size:1rem; }
+  .cta-btn{ width:100%; max-width:280px; }
+
+  .hero-img img{ max-width:100%; aspect-ratio:3/4; border-radius:15px; }
+
+  .events-grid{
+    flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch; justify-content:flex-start; gap:1rem; padding-left:1rem;
+  }
+  .event-card{ flex:0 0 80%; max-width:260px; scroll-snap-align:center; }
+  .event-card img{ height:130px !important; }
+  .event-card h3{ font-size:1rem; }
+  .event-card p{ font-size:.85rem; }
+  .events .event-card .content .rsvp-btn,
+  .event-card button{ font-size:.85rem; padding:7px 14px; }
+}
+@media (max-width:480px){
+  .brand{ font-size:1.25rem; }
+  .hero-text h1{ font-size:1.8rem; line-height:1.3; }
+  .hero-text p{ font-size:.95rem; }
+  .event-card h3{ font-size:1.1rem; }
+  .event-card p, .post p{ font-size:.9rem; }
+  .cta-btn{ padding:.6rem 1.2rem; font-size:.95rem; }
+}

@@ -1,0 +1,175 @@
+/* NAVBAR CONTAINER */
+.global-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LEFT SIDE */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #111;
+}
+
+/* RIGHT SIDE */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* LINKS */
+.navbar-right a {
+    font-weight: 500;
+    color: #374151;
+    text-decoration: none;
+}
+
+.navbar-right a:hover {
+    color: #2fa7b1;
+}
+
+/* ===================================================
+   AVATAR — FIXED SIZING
+   =================================================== */
+.avatar {
+    width: 36px !important;
+    height: 36px !important;
+
+    min-width: 36px !important;
+    min-height: 36px !important;
+
+    max-width: 36px !important;
+    max-height: 36px !important;
+
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #fff;
+    display: block;
+}
+
+/* ===================================================
+   MAIN DROPDOWN
+   =================================================== */
+.dropdown-menu {
+    position: absolute;
+    top: 65px;
+    right: 1.5rem;
+
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    z-index: 2000;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: #374151;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+    background: #f3f4f6;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+    color: #c0392b !important;
+    font-weight: 600;
+}
+
+.logout-btn:hover {
+    background: #fdecea !important;
+}
+
+/* ===================================================
+   DOG DROPDOWN (SUBMENU)
+   =================================================== */
+
+/* "Dog Profiles ▾" text */
+.submenu-title {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    color: #374151;
+    font-weight: 500;
+    display: block;
+    user-select: none;
+}
+
+.submenu-title:hover {
+    background: #f3f4f6;
+}
+
+/* Container for list of dogs */
+.submenu-items {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-top: 1px solid #eee;
+    padding-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Each dog name */
+.submenu-item {
+    padding: 0.6rem 1.25rem;
+    color: #374151;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.submenu-item:hover {
+    background: #eef2ff;
+}
+
+/* “No dogs found” */
+.submenu-item.disabled {
+    color: #9ca3af;
+    cursor: default;
+    background: none !important;
+}
+
+/* Divider inside submenu */
+.submenu-items hr {
+    margin: 0.4rem 0;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+}

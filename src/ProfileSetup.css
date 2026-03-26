@@ -1,0 +1,195 @@
+/* =========================
+   ProfileSetup.css
+   =========================
+   Uses your existing palette and layout classes from CreateAccount.css.
+   This file adds/adjusts styles just for the setup + wizard screens.
+*/
+
+/* --- Avatar / Uploader --- */
+.uploader {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 16px;
+  border: 2px dashed #e5e7eb;
+  border-radius: 16px;
+  background: #fafafa;
+  margin-bottom: 16px;
+}
+
+.uploader.roomier {
+  padding: 20px;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.avatar-wrap {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  flex: 0 0 auto;
+  background: #fff;
+}
+
+.avatar-wrap.xl {
+  width: 160px;
+  height: 160px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uploader-text p {
+  margin: 4px 0;
+  color: #6b7280;
+}
+
+/* --- Form layout helpers --- */
+.field.grow {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.Button.wide {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 999px;
+}
+
+/* Optional: ghost button (if not already present) */
+.Button.ghost {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+}
+.Button.ghost:hover {
+  background: #f9fafb;
+}
+
+/* --- Chip grid (used in setup summaries and wizard) --- */
+.prefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 12px 0 20px;
+}
+
+/* Section wrapper (nice breathing room + title) */
+.prefs-section {
+  margin: 18px 0 8px;
+}
+.prefs-title {
+  margin: 12px 0 6px;
+  font-size: 1.1rem;
+}
+
+/* Chip pill */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: transform 0.05s ease, box-shadow 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.chip.on {
+  border-color: #34d399;   /* emerald-400 */
+  background: #ecfdf5;     /* emerald-50 */
+}
+
+/* Legacy danger styles (safe to keep; you might use them later) */
+.chip.danger { border-color: #fca5a5; background: #fff; }
+.chip.danger.on { background: #fef2f2; border-color: #f87171; }
+
+/* --- Wizard-specific bits (for /profile/questions) --- */
+.progress {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 4px 0 16px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.dot.active {
+  background: #60a5fa;     /* blue-400 */
+  border-color: #60a5fa;
+}
+
+.dot.done {
+  background: #34d399;     /* emerald-400 */
+  border-color: #34d399;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slide-title {
+  margin: 8px 0 4px;
+  font-size: 1.25rem;
+}
+
+.slide-subtitle {
+  margin: 0 0 4px;
+  color: #6b7280;
+}
+
+.wizard-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 900px) {
+  .avatar-wrap.xl {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 720px) {
+  .uploader, .uploader.roomier {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .Button.wide {
+    max-width: 100%;
+  }
+  .wizard-actions {
+    flex-direction: column;
+  }
+}
+

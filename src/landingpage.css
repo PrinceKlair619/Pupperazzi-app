@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* GLOBAL RESET + FONT */
+ .landing-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0.5px 0 rgba(0,0,0,0.12);
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 1.1rem; /* Made larger */
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #4a90a4;
+}
+
+/* HERO SECTION */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    background-color: #fdfdfd;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 140px; /* Nudged right */
+}
+
+/* HEADLINE (not Quicksand) */
+.hero-text h1 {
+    font-size: 2.8rem;
+    font-family: 'Helvetica Neue', sans-serif; /* Excluded from Quicksand */
+    color: #4a90a4;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* SUBHEAD (not Quicksand) */
+.hero-text p {
+    font-size: 1.1rem;
+    font-family: 'Helvetica Neue', sans-serif; /* Excluded from Quicksand */
+    margin-bottom: 30px;
+}
+
+/* CTA BUTTON */
+.cta-button {
+    background-color: #4a90a4;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3b7f91;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+    margin-right: 40px;
+}
+
+.hero-image img {
+    max-width: 500px;
+    height: auto;
+}
+
+/* FEATURES SECTION */
+.features {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+/* FEATURE CARDS */
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card.pink {
+    background-color: #fce6e6;
+}
+
+.card.blue {
+    background-color: #e6f7f8;
+}
+
+.card.yellow {
+    background-color: #fef1db;
+}
+
+
+
+/* === FINAL MOBILE LAYOUT (Matching Uploaded Screenshot) === */
+@media (max-width: 600px) {
+    /* Reset base */
+    body, html, .landing-page {
+        background-color: #ffffff;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* HERO SECTION */
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 14px;
+    }
+
+    .hero-image img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+        color: #4a90a4;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.3;
+        margin: 0 auto 10px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        color: #333;
+        margin: 0 auto 24px;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .cta-button {
+        background-color: #4a90a4;
+        color: white;
+        font-size: 1rem;
+        padding: 12px 28px;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    /* FEATURES SECTION */
+    .features {
+        text-align: center;
+        padding: 50px 20px 30px 20px;
+    }
+
+    .features h2 {
+        font-size: 1.4rem;
+        color: #000;
+        margin-bottom: 6px;
+    }
+
+    .subheading {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .card {
+        width: 85%;
+        max-width: 320px;
+        padding: 22px 18px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Hide blue "Safe & Verified" card */
+    .card.blue {
+        display: none;
+    }
+
+    .card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+
+}
+/* === FIX HERO ICON POSITION + ALIGNMENT ON MOBILE === */
+@media (max-width: 600px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 10px; /* even spacing between elements */
+    }
+
+    /* Move image ABOVE the text */
+    .hero-image {
+        order: -1; /* forces the image to appear first */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 110px;
+        height: auto;
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+        font-weight: 600;
+        color: #4a90a4;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 22px;
+        max-width: 280px;
+    }
+
+    .cta-button {
+        background-color: #4a90a4;
+        color: white;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+        margin-bottom: 8px;
+    }
+
+    /* Keep feature cards clean and centered */
+    .features {
+        text-align: center;
+        padding: 50px 20px 30px 20px;
+    }
+
+    .feature-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .card.blue {
+        display: none;
+    }
+
+    .card {
+        width: 85%;
+        max-width: 320px;
+        padding: 22px 18px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    /* Slightly nudge hero content to the left */
+    .hero-section {
+        transform: translateX(-15px); /* shift left by 6px */
+    }
+
+    /* Optional: make sure inner text aligns visually */
+    .hero-text,
+    .hero-image,
+    .cta-button {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Slight left shift for feature cards */
+    .feature-cards {
+        transform: translateX(-10px); /* shift left the same amount as hero section */
+    }
+
+    /* Ensure cards stay visually centered and consistent */
+    .card {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+
+    /* Hide the big "Pupperazzi" text on mobile for cleaner layout */
+    .logo {
+        display: none !important;
+    }
+
+
+    .hero-section {
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Slightly shift nav links left */
+    .nav-links {
+        transform: translateX(-1px); /* adjust value as needed */
+    }
+}
+

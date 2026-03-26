@@ -1,0 +1,179 @@
+/* --------------------------------------------------
+   CONTAINER WRAPPER (matches HumanProfile edit page)
+-------------------------------------------------- */
+.edit-container {
+  width: 88%;
+  max-width: 640px;
+  margin: 40px auto;
+  padding-bottom: 80px;
+}
+
+/* Title */
+.edit-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* --------------------------------------------------
+   FORM CARD WRAPPER
+-------------------------------------------------- */
+.edit-form {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0px 4px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Labels */
+.edit-form label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #444;
+  margin-bottom: -6px;
+}
+
+/* Input + Select */
+.edit-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #fafafa;
+  outline: none;
+  transition: 0.15s;
+}
+
+.edit-input:focus {
+  border-color: #4ea3ff;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(78,163,255,0.25);
+}
+
+/* Textarea */
+.edit-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  resize: vertical;
+  background: #fafafa;
+}
+
+.edit-textarea:focus {
+  border-color: #4ea3ff;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(78,163,255,0.25);
+}
+
+/* --------------------------------------------------
+   CHIPS SYSTEM (personality + preferences)
+-------------------------------------------------- */
+.chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+  background: #f9fafb;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.chip {
+  background: #eaf2ff;
+  color: #134aa3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 1px solid #cce0ff;
+}
+
+.chip-x {
+  background: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  color: #134aa3;
+}
+
+.chip-input {
+  flex: 1;
+  border: none;
+  font-size: 14px;
+  background: transparent;
+  padding: 6px;
+  outline: none;
+}
+
+/* --------------------------------------------------
+   PHOTO GALLERY (inside edit screen)
+-------------------------------------------------- */
+.photo-edit-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.photo-item {
+  position: relative;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* --------------------------------------------------
+   ACTION BUTTONS
+-------------------------------------------------- */
+.edit-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #2fa7ff, #1d7ed6);
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0px 3px 12px rgba(0,128,255,0.4);
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 16px rgba(0,128,255,0.55);
+}

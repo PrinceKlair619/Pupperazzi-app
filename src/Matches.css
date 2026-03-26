@@ -1,0 +1,177 @@
+/* ===== PAGE BACKGROUND ===== */
+.swipe-page-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #dff8f2 0%, #e0f0ff 100%);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* ===== GRID LAYOUT ===== */
+.swipe-container {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+
+}
+
+/* ===== SIDEBARS ===== */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ===== CARDS (Glass Effect) ===== */
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.glass h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.glass ul {
+    list-style: none;
+    padding: 0;
+}
+
+.glass ul li {
+    padding: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+/* ===== FILTER LABELS ===== */
+.filter-card label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+}
+
+.filter-card span {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.2rem;
+}
+
+input[type="range"] {
+    accent-color: #4caf50;
+}
+
+select {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    background: white;
+}
+
+/* ===== DOG CARD ===== */
+.swipe-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dog-card {
+    max-width: 450px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dog-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.dog-info {
+    padding: 1rem;
+}
+
+.dog-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.dog-info p {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    color: #555;
+}
+
+.dog-info .bio {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.swipe-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1rem;
+}
+
+.action {
+    font-size: 1.6rem;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 50%;
+    padding: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.action:hover {
+    transform: scale(1.15);
+}
+
+.action.skip:hover {
+    background-color: #ffdddd;
+}
+
+.action.like:hover {
+    background-color: #d6f5d6;
+}
+
+.action.favorite:hover {
+    background-color: #fff0b3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 960px) {
+    .swipe-container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sidebar .glass {
+        flex: 1 1 200px;
+    }
+}

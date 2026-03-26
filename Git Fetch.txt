@@ -1,0 +1,40 @@
+﻿Git Fetch Report
+Overview
+git fetch is a Git command used to download commits, branches, tags, and other references from a remote repository into your local repository without merging them into your working directory. Unlike git pull, it does not automatically integrate changes; it only updates your remote tracking branches, like origin/main.
+
+
+This makes it safe to you without the risk of overwriting your own code that you have not committed yet. It also allows you to inspect the code before having it changed on your own end.
+How It Works
+When you run git fetch, Git communicates with the remote repository to:
+* identify new data (commits, branches, tags) that your local repo does not have.
+* update remote-tracking branches (like origin/main) to point to the latest state on the remote.
+
+
+Variations of git fetch
+When using git fetch, we can add flags afterwards to indicate sub-instructions. Although there are many different flags that attach to git fetch, the most relevant ones in my opinion are:
+
+
+git fetch origin
+* fetch from a specific origin remote
+git fetch –all
+* fetch from all remotes
+git fetch origin feature-branch
+* fetch a specific branch
+Key Differences Between git fetch and git pull
+
+
+git fetch
+	git pull
+	* only downloads updates
+* no changes to local branches
+	* runs git fetch
+* then merge right after
+	
+
+Summary
+git fetch is better when compared with git pull. This is because it allows us as programmers to have a sneak peek at when it will be changed. This gives us a sense of certainty and allow us to know exactly what will be changed when we eventually pull from dev.
+Examples
+When you create a local branch to work on a task, your teammates may also be making changes to the dev branch via other tasks. If one of them finishes their work and pushes commits to github, you won’t automatically see those updates on your local machine. Running git fetch will update your remote-tracking branches, like origin/dev, with the latest changes. Once you’re reviewed them, you can use git pull to bring those changes into your local branch.
+
+
+For example, suppose Student A creates a branch to work on the backend, and Student B creates a branch to work on the frontend. If Student B finishes their work and merges it into the dev branch on Github, Student A’s local copy will not automatically reflect those changes. Student A would first run git fetch to update the remote-tracking branch, origin/dev. After reviewing and confirming that the changes are stable, Student A can run git pull to bring those updates into their local branch.

@@ -1,0 +1,333 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f6f7f9;
+}
+
+
+.container {
+    flex: 1;                    /* 👈 This is the key */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 20px;
+}
+
+.Card1 {
+    background: #fff;
+    padding: 48px 40px;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0px;
+}
+
+.link {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link:hover {
+    opacity: 0.7;
+}
+
+/* Center card wrapper */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+
+
+.icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px;
+}
+
+
+.Card1-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.Card1-sub {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+/* Form styling */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 0px;
+    border: 0px solid #ccc;
+}
+.input input {
+    width: 100%; padding: 12px 12px 12px 10px; font-size: 14px;
+    border: 1px solid transparent; /* removed box look */
+    background: #ffffff;
+    border-radius: 10px; outline: none;
+    transition: box-shadow .15s ease, background .15s ease;
+}
+.input input:focus {
+
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(96,165,250,.28);
+}
+
+.helpers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: linear-gradient(to right, #60c657, #35aee2);
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(1.05);
+}
+
+.signin-text {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signin-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+.strength-section {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.strength-wrapper {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.strength-bar {
+    flex: 1;
+    height: 6px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.rules {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.rules li {
+    margin-top: 2px;
+    transition: color 0.3s ease;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+    .Card1 {
+        padding: 20px;
+    }
+}
+
+/* === Final Mobile Responsive Styling for Login Page === */
+@media (max-width: 600px) {
+    /* Global layout */
+    body {
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hide top Pupperazzi brand in nav */
+    .nav .brand {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    /* Center content and card */
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh; /* centers card vertically */
+        padding-top: 20px;
+        padding-bottom: 0;
+        background-color: #ffffff;
+    }
+
+
+    .Card1 {
+        padding: 36px 24px;
+        width: 90%;
+        max-width: 360px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+
+    .logo-badge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .icon {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #fff;
+        margin-bottom: 10px;
+    }
+
+    .Card1-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1f1f1f;
+        margin-bottom: 6px;
+    }
+
+    .Card1-sub {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 24px;
+    }
+
+    /* Inputs */
+    .field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 14px;
+    }
+
+    .input {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input input {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        background: #f8fafc;
+        border: 1px solid #e0e4eb;
+        font-size: 14px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .input input:focus {
+        background: #ffffff;
+        border-color: #60a5fa;
+        box-shadow: 0 4px 10px rgba(96, 165, 250, 0.25);
+    }
+
+    /* Helpers */
+    .helpers {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto 12px;
+        font-size: 13px;
+        color: #666;
+    }
+
+    /* Sign In Button */
+    .button {
+        background: linear-gradient(90deg, #a7f3d0, #93c5fd, #6a89f8);
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 12px 0;
+        width: 100%;
+        max-width: 300px;
+        color: #fff;
+        margin: 16px auto 0;
+        box-shadow: 0 4px 12px rgba(147, 197, 253, 0.4);
+    }
+
+    .signin-text {
+        font-size: 13px;
+        color: #444;
+        margin-top: 16px;
+    }
+
+    .signin-text a {
+        color: #4a90e2;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+
+}

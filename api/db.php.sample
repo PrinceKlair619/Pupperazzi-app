@@ -1,0 +1,21 @@
+<?php
+$DB_HOST = "127.0.0.1";
+$DB_NAME = "cse442_2025_fall_team_ac_db";
+$DB_USER = "root";     // local default
+$DB_PASS = "";         // local default
+
+$pdo = new PDO(
+    "mysql:host=$DB_HOST;port=3306;dbname=$DB_NAME;charset=utf8mb4",
+    $DB_USER,
+    $DB_PASS,
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ]
+);
+
+// ✅ Add this helper function
+function get_db(): PDO {
+    global $pdo;
+    return $pdo;
+}

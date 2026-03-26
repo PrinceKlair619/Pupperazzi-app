@@ -1,0 +1,170 @@
+/* --------------------------------------------------
+   WRAPPER — perfect width + spacing
+-------------------------------------------------- */
+.profile-wrapper {
+  width: 78%;                 /* nice whitespace on sides */
+  max-width: 900px;           /* NOT too wide */
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 120px;      /* ensures sidebar never hits footer */
+}
+
+
+/* --------------------------------------------------
+   BANNER — touches top
+-------------------------------------------------- */
+.banner {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  position: relative;
+  margin-top: 0;              /* no gap above banner */
+}
+
+
+/* --------------------------------------------------
+   AVATAR
+-------------------------------------------------- */
+.avatar-wrapper {
+  position: absolute;
+  left: 35px;
+  bottom: -80px;
+}
+
+.avatar-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* --------------------------------------------------
+   LEFT COLUMN — aligns About box perfectly
+-------------------------------------------------- */
+.left-column {
+  flex: 1;
+  max-width: 600px;        /* ✨ PERFECT width for About alignment */
+  margin-top: 120px;       /* room for avatar */
+}
+
+.profile-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profile-location {
+  color: #777;
+  margin-top: 2px;
+}
+
+/* Chips */
+.meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chip {
+  padding: 6px 14px;
+  background: #f3f4f6;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+
+/* --------------------------------------------------
+   EDIT BUTTON
+-------------------------------------------------- */
+.profile-edit-btn {
+  background: linear-gradient(135deg, #2fa7ff, #1d7ed6);
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0px 3px 12px rgba(0, 128, 255, 0.35);
+  transition: 0.2s ease;
+}
+
+.profile-edit-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* --------------------------------------------------
+   ABOUT BOX
+-------------------------------------------------- */
+.box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #eee;
+  margin-top: 25px;
+}
+
+
+/* --------------------------------------------------
+   RIGHT SIDEBAR — floating clean like human page
+-------------------------------------------------- */
+.right-sidebar {
+  width: 260px;
+  float: right;
+  margin-top: 10px;
+}
+
+/* ensures wrapper expands & sidebar never overlaps footer */
+.profile-wrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.side-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 22px;
+}
+
+.side-card h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.side-card ul {
+  margin-left: 18px;
+}
+
+.side-card li {
+  margin-bottom: 6px;
+}
+
+
+/* --------------------------------------------------
+   PHOTOS — contained + pretty
+-------------------------------------------------- */
+.side-card img {
+  width: 100%;
+  height: auto;
+  max-height: 265px;
+  object-fit: cover;
+  border-radius: 12px;
+}

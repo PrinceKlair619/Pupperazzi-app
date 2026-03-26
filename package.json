@@ -1,0 +1,34 @@
+{
+  "name": "f25-pupperazzi",
+  "version": "1.0.0",
+  "description": "This branch implements Task #62:\r - Created a **PHP Hello World** page (`index.php`) to prove PHP + MySQL connectivity on the aptitude server.\r - Added a simple **`api.php`** endpoint that returns JSON from the database.\r - Built a **React proof-of-concept (POC)** app using Vite, deployed under `/react/`, which fetches and displays data from `api.php`.\r - Added research notes as a `.txt` file in the `documents/` folder.",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse442-software-engineering-ub/f25-pupperazzi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse442-software-engineering-ub/f25-pupperazzi/issues"
+  },
+  "homepage": "https://github.com/cse442-software-engineering-ub/f25-pupperazzi#readme",
+  "dependencies": {
+    "country-state-city": "^3.2.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.3",
+    "react-select": "^5.10.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.9"
+  }
+}

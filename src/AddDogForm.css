@@ -1,0 +1,468 @@
+/* ====== SCOPE EVERYTHING TO THIS PAGE ====== */
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.page {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* === Desktop baseline === */
+.create-dog .row { display: flex; gap: 20px; }
+.create-dog .col { flex: 1; min-width: 0; }
+
+/* show ALL personality chips on desktop */
+.create-dog .pills .pill { display: inline-flex; }
+.create-dog .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 80px;
+    box-sizing: border-box;
+    gap: 28px;
+    position: relative; /* ✅ for close button positioning */
+}
+
+/* ❌ Close Button (X) */
+.close-x {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    transition: 0.2s ease;
+    z-index: 10;
+}
+.close-x:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Top hero */
+.create-dog .hero {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+}
+.create-dog .hero-logo-left {
+    position: absolute;
+    left: -290px;
+    top: 10px;
+    width: 350px;
+    height: 270px;
+    object-fit: contain;
+}
+.create-dog .hero-brand {
+    position: absolute;
+    left: -200px;
+    top: -44px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #111827;
+}
+.create-dog .header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.create-dog .header h1 {
+    margin: 0 0 8px 0;
+    font-size: 34px;
+    font-weight: 800;
+    color: #111827;
+}
+.create-dog .header p {
+    margin: 0 16px 18px 16px;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* Stepper */
+.create-dog .stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.create-dog .step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+}
+.create-dog .circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #111827;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+}
+.create-dog .step.active .circle {
+    background: #2563eb;
+    color: #ffffff;
+}
+.create-dog .line {
+    width: 56px;
+    height: 2px;
+    background: #e5e7eb;
+    border-radius: 2px;
+}
+
+/* Card */
+.create-dog .card {
+    background: #ffffff;
+    padding: 36px 44px 80px;
+    width: 100%;
+    max-width: 980px;
+    border-radius: 60px;
+    box-shadow: 0 14px 42px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+.create-dog .card-title {
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    margin: 6px 0 8px;
+    color: #111827;
+}
+.create-dog .card-sub {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+/* Upload */
+.create-dog .upload-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.create-dog .upload {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 2px dashed #d1d5db;
+    background: #f8fafc;
+    display: grid;
+    place-items: center;
+    color: #6b7280;
+    font-size: 12px;
+    position: relative;
+}
+.create-dog .upload .plus {
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ef4444;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Form – simple rows */
+.create-dog .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 8px;
+}
+.create-dog .row {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.create-dog .row.align-controls { align-items: flex-end; }
+.create-dog .row.align-controls .field { width: 100%; }
+
+.create-dog .col { flex: 1; min-width: 260px; }
+
+.create-dog .field { display: flex; flex-direction: column; gap: 8px; }
+.create-dog .field-label { font-size: 12px; color: #6b7280; }
+
+.create-dog .input, .create-dog .select { width: 100%; }
+
+/* unified controls */
+.create-dog .input input,
+.create-dog .select select,
+.create-dog .input textarea {
+    width: 100%;
+    height: 44px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f4f6f8;
+    outline: none;
+    transition: box-shadow .15s ease, background .15s ease, border-color .15s ease;
+}
+.create-dog .input textarea { min-height: 90px; height: auto; resize: vertical; }
+.create-dog .input input:focus,
+.create-dog .select select:focus,
+.create-dog .input textarea:focus {
+    background: #ffffff;
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 4px rgba(147, 197, 253, .35);
+}
+.create-dog .field.narrow .input input,
+.create-dog .field.narrow .select select { max-width: none; }
+
+/* normalize first-row baseline */
+.create-dog .row.align-controls .input input,
+.create-dog .row.align-controls .select select {
+    line-height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+/* Gender radios */
+.create-dog .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.create-dog .radio-group input[type="radio"] {
+    width: 30px;
+    height: 16px;
+    margin: 0;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+.create-dog .radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Personality pills */
+.create-dog .pills { display: flex; flex-wrap: wrap; gap: 12px; }
+.create-dog .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    font-size: 13px;
+    color: #111827;
+}
+
+/* Range */
+.create-dog .range-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+/* Nudge Favorite Activity down a bit */
+.create-dog .field:has(select[aria-label="Favorite Activity"]) {
+    margin-top: 60px;
+}
+
+/* Actions */
+.create-dog .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 60px;
+}
+.create-dog .button {
+    margin-top: 1rem;
+    padding: 10px 16px;
+    background: linear-gradient(to right, #b0f0d0, #60b8f5);
+    border: none;
+    border-radius: 60px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+.create-dog .button:hover { filter: brightness(1.05); }
+
+.create-dog .pills {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 16px;
+}
+
+/* Range Slider Styling */
+.create-dog input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 22px;
+    background: transparent;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.create-dog input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #3f3f3f;
+    border-radius: 999px;
+}
+.create-dog input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #6b6b6b;
+    margin-top: calc((6px - 16px) / 2);
+}
+
+.create-dog .preview {
+    margin-top: 80px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 20px 24px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.08);
+    position: relative;
+    z-index: 0;
+}
+
+/* A little extra room at the bottom of the main card */
+.create-dog .card {
+    padding-bottom: 96px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE (≤768px)
+   ========================= */
+@media (max-width: 768px) {
+    .create-dog .container {
+        padding: 22px 10px 56px;
+        gap: 16px;
+    }
+
+    .create-dog .card {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+        border-radius: 18px;
+        padding: 16px 14px 88px;
+        box-shadow: 0 10px 26px rgba(0,0,0,.12);
+    }
+
+    .close-x {
+        top: 12px;
+        right: 14px;
+        font-size: 1.6rem;
+    }
+
+    .create-dog .row {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .create-dog .col {
+        min-width: 100%;
+    }
+
+    .create-dog .input input,
+    .create-dog .select select {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+
+    .create-dog .radio-group {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .create-dog .pills {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+        position: relative;
+        z-index: 1;
+        pointer-events: auto;
+    }
+
+    .create-dog .pill {
+        padding: 10px 14px;
+        font-size: 14px;
+        border-radius: 999px;
+    }
+
+    .create-dog .pill input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .create-dog .pills .pill:nth-child(n+7) {
+        display: none;
+    }
+
+    .create-dog .actions {
+        position: sticky;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        margin: 12px -14px 0;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 30%);
+        backdrop-filter: blur(6px);
+        z-index: 5;
+    }
+
+    .create-dog .actions .button {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 18px;
+        border-radius: 28px;
+        box-shadow: 0 8px 18px rgba(72, 99, 236, .24);
+    }
+}
+
+@media (max-width: 390px) {
+    .create-dog .card {
+        padding: 14px 10px 84px;
+    }
+
+    .close-x {
+        top: 8px;
+        right: 10px;
+        font-size: 1.4rem;
+    }
+
+    .create-dog .pill {
+        padding: 9px 12px;
+        font-size: 13.5px;
+    }
+
+    .create-dog .actions {
+        bottom: 8px;
+        margin: 12px -10px 0;
+    }
+}
